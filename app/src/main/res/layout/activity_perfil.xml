@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </include>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/activity_vertical_margin">
+            <!--
+                    TextView goes at the top left by default .
+                -->
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/label"
+                android:background="@color/labelcontacto" />
+
+
+            <TextView
+                android:id="@+id/lbl_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/label"
+                android:paddingTop="5dp"
+                android:text="Nombre"
+                android:textColor="@color/labelcontacto" />
+
+            <EditText
+                android:id="@+id/entry_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_nombre"
+                android:background="@android:drawable/editbox_background"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/lbl_apell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/entry_name"
+                android:text="Apellido"
+                android:textColor="@color/labelcontacto" />
+
+            <EditText
+                android:id="@+id/entry_apell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_apell"
+                android:background="@android:drawable/editbox_background"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/lbl_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/entry_apell"
+                android:text="Correo"
+                android:textColor="@color/labelcontacto" />
+
+            <EditText
+                android:id="@+id/entry_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_mail"
+                android:background="@android:drawable/editbox_background"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/lbl_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/entry_mail"
+                android:text="Teléfono"
+                android:textColor="@color/labelcontacto" />
+
+            <EditText
+                android:id="@+id/entry_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_tel"
+                android:background="@android:drawable/editbox_background"
+                android:inputType="phone" />
+
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/entry_tel"
+                android:layout_marginBottom="216dp"
+                android:text="Enviar" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
